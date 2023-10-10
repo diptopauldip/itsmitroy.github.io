@@ -192,12 +192,12 @@ const HomePage = ({ data }) => {
     <Layout>
       <section className={styles.header}>
         <div>
-          <h2>Hi,</h2>
-          <h3>I am Dipto Paul.</h3>
+          <h4>Hi, I am</h4>
+          <h2>Mithun Roy.</h2>
+          <p>I'm a Civil Engineer, expert in structural designing.</p>
           <Link className={styles.btn} to='/projects'>
             My Projects
           </Link>
-          <p>I'm making this by following the Gatsby Tutorial.</p>
         </div>
         <GatsbyImage
           image={data.file.childImageSharp.gatsbyImageData}

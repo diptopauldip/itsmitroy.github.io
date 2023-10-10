@@ -51,3 +51,8 @@ Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 ## Github Deployment
 
 execute the command `npm run deploy` to deploy the public files to github pages deployment source branch say branch name is gh-pages.
+
+## Frequent Errors
+
+1. Gatsby - The result of this StaticQuery could not be fetched
+1. run `gatsby clean` command

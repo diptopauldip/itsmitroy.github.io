@@ -4,11 +4,11 @@
 module.exports = {
   pathPrefix: "/gatsby-project-01",
   siteMetadata: {
-    title: `Dipto Paul`,
+    title: `Mithun Roy`,
     siteUrl: `https://www.yourdomain.tld`,
     description: "Software Engineer Portfolio",
     contact: "imdpauld@gmail.com",
-    copywrite: "This website is copywrite 2023 | Dipto Paul",
+    copywrite: "This website is copywrite 2023 | Mithun Roy",
   },
   plugins: [
     "gatsby-plugin-image",
