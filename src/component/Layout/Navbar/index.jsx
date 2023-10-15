@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div className='nav-container'>
-      <div className='logo'>Logo</div>
+      <div className='logo'>Mithun Roy</div>
       <div
         className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
         onClick={handleToggleClick}
@@ -53,16 +53,16 @@ const Navbar = () => {
       <nav>
         <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <li onClick={handleNavLinkClick}>
-            <Link to='#'>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li onClick={handleNavLinkClick}>
-            <Link to='#'>About</Link>
+            <Link to='/about'>About</Link>
           </li>
           <li onClick={handleNavLinkClick}>
-            <Link to='#'>Contact</Link>
+            <Link to='/research'>Research</Link>
           </li>
           <li onClick={handleNavLinkClick}>
-            <Link to='#'>Services</Link>
+            <Link to='/blog'>Blog</Link>
           </li>
         </ul>
       </nav>

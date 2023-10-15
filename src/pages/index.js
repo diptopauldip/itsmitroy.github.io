@@ -191,36 +191,6 @@ const HomePage = () => {
   return (
     <Layout>
       <Home></Home>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
     </Layout>
   );
 };

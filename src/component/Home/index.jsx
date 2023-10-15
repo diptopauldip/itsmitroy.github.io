@@ -26,6 +26,40 @@ const Home = () => {
     <>
       <h1>Home page</h1>
       <h2>{description}</h2>
+      <div>Hero Section</div>
+      <div>Snap shot about skills</div>
+      <div>Research HighLights</div>
+      <div>Blog Highlights</div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
+        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
+        delectus.
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
+        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
+        delectus.
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
+        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
+        delectus.
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
+        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
+        delectus.
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
+        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
+        delectus.
+      </div>
     </>
   );
 };

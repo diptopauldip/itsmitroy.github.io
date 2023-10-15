@@ -106,15 +106,6 @@ p {
 }
 
 /* layout & nav */
-header {
-  /* all the text inside this container tag will be aligned to center position relative to their immediate parent class. For examaple: all the anchor text Home, about will be centered relative to their parent class li. When display:flex is being used a single li area becomes small, but still the home or about will be centered within the li itself, but not centered relative to header class. To visualise properly. turn of display flex from nav ul. Note: with display flex on, so to make the anchor home or about centered we can use justify-content peoprty of flexbox.*/
-
-  /* additional stuffs */
-  background-color: pink;
-  padding: 1em 0;
-  text-align: center;
-  margin-bottom: 2em; /*reduce the margin a littlle bit in mobile version?*/
-}
 .layout {
   /* max-width: 1200px; */
   margin: 0 auto;
@@ -130,30 +121,4 @@ footer p {
   /* color: #bbb; */
   color: inherit;
   /* margin: 40px auto; */
-}
-
-/* ============== Layout =============== */
-.container {
-  max-width: 1800px;
-  width: 90%;
-  /*for 4k this max-width will srinnk the container and will cause ugliness*/
-  /* max-width: 900px; */
-  /* border: 1px solid magenta; */
-  /* making the container centered with it's content */
-  margin: 0 auto;
-}
-.container-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  /* transition: transform 0.4s ease; */
-}
-
-@media (max-width: 768px) {
-  /* .container {
-    width: 95%;
-  } */
-  .container-flex {
-    flex-direction: column;
-  }
 }

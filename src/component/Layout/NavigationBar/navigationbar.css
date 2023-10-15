@@ -2,7 +2,7 @@
 .header-sticky {
   position: sticky;
   top: 0;
-  background-color: pink;
+  background-color: transparent;
 }
 .common-container {
   max-width: 1800px;
@@ -27,6 +27,7 @@
 
 .logo {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .nav-menu {
