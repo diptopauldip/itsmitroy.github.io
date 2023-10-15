@@ -1,16 +1,22 @@
 import React from "react";
-import Navbar from "./Navbar";
+// import ToggleMenuMFTest from "./Old/ToggleMenuMobileFirst";
 import "../styles/global.css";
 import Footer from "./Footer";
+// import ToggleMenuMobileFirstComplete from "./Old/NavigationBar";
+import NavigationBar from "./NavigationBar";
+import Navbar from "./Layout/Navbar";
+import Wrapper from "./Common/Wrapper";
+import Header from "./Layout/Header";
 
 const Layout = ({ children }) => {
   return (
     <div className='layout'>
-      <Navbar></Navbar>
+      <Header>
+        <Wrapper>
+          <Navbar></Navbar>
+        </Wrapper>
+      </Header>
       <div className='content'>{children}</div>
-      {/* <footer>
-        <p>Copywrite 2023 Dipto Dip</p>
-      </footer> */}
       <Footer></Footer>
     </div>
   );

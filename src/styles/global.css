@@ -1,14 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500; 700&display=swap");
+:root {
+  --white: #ffffff;
+  --light: #dddce5;
+  --grey: #707070;
+  --lightblue: #1792d2;
+  --sweetblue: #143774;
+  --lightgray: #efefef;
+  --dark: #060b09;
+  --black: #000000;
+  --primary: #fcaf14;
+  --secondary: ;
+  --brick: #aa4a44;
+  --brick2: #bc4a3c;
+  --brick-dark: #842020;
+  --concrete: #606165;
+  --concrete2: #747270;
+
+  /* primary / nav / default - WHAT?! */
+  --ff-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ff-alt-alpha: "Open Sans", sans-serif;
+  --ff-alt-beta: "Roboto", sans-serif; /*For nav*/
+  --ff-icon: "My Icon Font";
+
+  --clr-primary: skyblue;
+  --clr-primary-lt: lighten($clr-primary, 5%);
+  --clr-primary-ltr: lighten($clr-primary, 10%);
+  --clr-primary-dk: darken($clr-primary, 5%);
+  --clr-primary-dkr: darken($clr-primary, 10%);
+
+  --link-color-h: 0;
+  --link-color-s: 70%;
+  --link-color-l: 35%;
+  --link-color-hsl: var(--link-color-h), var(--link-color-s),
+    var(--link-color-l);
+
+  --link-color: hsl(var(--link-color-hsl));
+  --link-color-10: hsla(var(--link-color-hsl), 0.1);
+  --link-color-20: hsla(var(--link-color-hsl), 0.2);
+  --link-color-30: hsla(var(--link-color-hsl), 0.3);
+  --link-color-40: hsla(var(--link-color-hsl), 0.4);
+  --link-color-50: hsla(var(--link-color-hsl), 0.5);
+  --link-color-60: hsla(var(--link-color-hsl), 0.6);
+  --link-color-70: hsla(var(--link-color-hsl), 0.7);
+  --link-color-80: hsla(var(--link-color-hsl), 0.8);
+  --link-color-90: hsla(var(--link-color-hsl), 1);
+}
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: "Montserrat";
-  color: white;
+  color: #991b1b;
+  /* color: var(--link-color-90); */
 }
+
+html {
+  /*default size of 16px will work if some browser like opera-mini does not support vw */
+  font-size: calc(0.2em + 1vw);
+}
+
+/* Below 880px it becomes 13px, so add a breakpoint of 14px */
+@media (max-width: 880px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* After 1800px it becomes 22px+ very large, so add a breakpoint of 22px , set max-size to 22 for large screen 1800+ */
+@media (min-width: 1800px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 html,
 body {
   min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--link-color-90);
 }
 body {
   background: radial-gradient(
@@ -18,11 +98,7 @@ body {
     #053b50 100% /* #176b87 0%,
     #053b50 100% */
   );
-  /* background-color: #44b09e;
-  background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%); */
-  /* background-color: #000000;
-  background-image: linear-gradient(147deg, #04619f 0%, #2a2a46 74%);
-  background-repeat: no-repeat; */
+  background: white;
 }
 p {
   margin: 16px auto;
@@ -30,31 +106,54 @@ p {
 }
 
 /* layout & nav */
+header {
+  /* all the text inside this container tag will be aligned to center position relative to their immediate parent class. For examaple: all the anchor text Home, about will be centered relative to their parent class li. When display:flex is being used a single li area becomes small, but still the home or about will be centered within the li itself, but not centered relative to header class. To visualise properly. turn of display flex from nav ul. Note: with display flex on, so to make the anchor home or about centered we can use justify-content peoprty of flexbox.*/
+
+  /* additional stuffs */
+  background-color: pink;
+  padding: 1em 0;
+  text-align: center;
+  margin-bottom: 2em; /*reduce the margin a littlle bit in mobile version?*/
+}
 .layout {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
-}
-nav .links {
-  display: inline-block;
-  text-align: right;
-}
-nav a {
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 400;
-  padding-bottom: 8px;
-  border-bottom: 3px solid transparent;
-}
-nav a:hover {
-  border-color: white;
+
+footer {
+  background-color: pink;
+  padding: 0.5em 0;
+  text-align: center;
 }
 footer p {
   text-align: center;
-  color: #bbb;
-  margin: 40px auto;
+  /* color: #bbb; */
+  color: inherit;
+  /* margin: 40px auto; */
+}
+
+/* ============== Layout =============== */
+.container {
+  max-width: 1800px;
+  width: 90%;
+  /*for 4k this max-width will srinnk the container and will cause ugliness*/
+  /* max-width: 900px; */
+  /* border: 1px solid magenta; */
+  /* making the container centered with it's content */
+  margin: 0 auto;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* transition: transform 0.4s ease; */
+}
+
+@media (max-width: 768px) {
+  /* .container {
+    width: 95%;
+  } */
+  .container-flex {
+    flex-direction: column;
+  }
 }

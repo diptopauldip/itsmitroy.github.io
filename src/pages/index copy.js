@@ -186,41 +186,31 @@ import * as styles from "../styles/home.module.css";
 //or this,
 import { header } from "../styles/home.module.css";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Home from "../component/Home";
-const HomePage = () => {
+const HomePage = ({ data }) => {
+  const { title, description } = data.siteInfo.siteMetadata;
   return (
     <Layout>
-      <Home></Home>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
-        porro consequatur in nostrum fuga, vero, architecto atque dicta aliquam
-        ab a labore itaque repellendus. Velit eaque vitae placeat nostrum
-        delectus.
-      </div>
+      <section className={styles.header}>
+        <div>
+          <h4>Hi, I am</h4>
+          <h2>Mithun Roy.</h2>
+          <p>I'm a Civil Engineer, expert in structural designing.</p>
+          <Link className={styles.btn} to='/projects'>
+            My Projects
+          </Link>
+        </div>
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
+        ></GatsbyImage>
+        {/* <img src='/banner.png' alt='site banner' style={{ maxWidth: "100%" }} /> */}
+        {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
+      </section>
+      <section id='contact'>
+        <Contact />
+      </section>
+      <p>
+        {title} - {description}
+      </p>
     </Layout>
   );
 };
@@ -229,3 +219,23 @@ const HomePage = () => {
 export const Head = () => <title>Home Page</title>;
 
 export default HomePage;
+
+export const query = graphql`
+  query MyQuery {
+    siteInfo: site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+    file(relativePath: { eq: "banner.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+        )
+      }
+    }
+  }
+`;
