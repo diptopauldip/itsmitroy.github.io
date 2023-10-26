@@ -1,0 +1,70 @@
+/* HeroSection.css */
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container .content {
+  padding: 1.5em;
+}
+
+.hero-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-container p {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-container .button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container .image-container {
+  flex: 1;
+}
+
+.hero-container .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query for Larger Devices */
+@media only screen and (min-width: 48em) {
+  .hero-container {
+    flex-direction: row;
+  }
+
+  .hero-container .content {
+    flex: 1;
+    padding: 2em;
+  }
+
+  .hero-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-container p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-container .button-container {
+    flex-direction: row;
+  }
+}

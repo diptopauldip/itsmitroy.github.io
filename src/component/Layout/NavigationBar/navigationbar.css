@@ -1,3 +1,5 @@
+@import "../../../styles/global.css";
+
 /* toggle-mobile-first.css */
 .header-sticky {
   position: sticky;
@@ -30,6 +32,10 @@
   font-weight: 700;
 }
 
+.logo a {
+  color: var(--brick-semi-dark);
+}
+
 .nav-menu {
   display: none;
   list-style: none;
@@ -53,6 +59,10 @@ ul {
 .nav-menu li {
   margin: 1em 0;
   /* padding: 10px 0; */
+}
+
+.nav-menu li a {
+  color: var(--brick-semi-dark);
 }
 
 .menu-toggle {
@@ -81,7 +91,7 @@ ul {
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .nav-menu {
     display: flex !important;
     position: relative;

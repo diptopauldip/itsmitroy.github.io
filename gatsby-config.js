@@ -52,5 +52,6 @@ module.exports = {
         path: `${__dirname}/src/content/blogposts`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };

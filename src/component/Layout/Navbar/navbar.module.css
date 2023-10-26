@@ -1,3 +1,5 @@
+@import "../../../styles/global.css";
+
 /* toggle-mobile-first.css */
 .nav-container {
   display: flex;
@@ -32,8 +34,13 @@ ul {
 .nav-menu li {
   margin: 1em 0;
   /* padding: 10px 0; */
+  color: var(--brick-semi-dark);
 }
 
+.nav-menu Link,
+.nav-menu a {
+  color: var(--brick-semi-dark);
+}
 .menu-toggle {
   display: block;
   cursor: pointer;

@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/global.css";
 // import ToggleMenuMobileFirstComplete from "./Old/NavigationBar";
 // import Navbar from "./Layout/Navbar";
-import Wrapper from "./Common/Wrapper";
+// import Wrapper from "./Common/Wrapper";
 import Header from "./Layout/Header";
 import NavigationBar from "./Layout/NavigationBar";
 import Footer from "./Layout/Footer";

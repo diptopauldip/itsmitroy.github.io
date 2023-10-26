@@ -16,7 +16,7 @@ const BlogPostDetails = ({ data }) => {
           {post.frontmatter.date} | {post.frontmatter.author}
         </h3>
         <div
-          className={styles.html}
+          className={styles.blog - html}
           dangerouslySetInnerHTML={{ __html: post.html }}
         ></div>
       </div>

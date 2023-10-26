@@ -182,11 +182,12 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../component/Layout";
 import Contact from "../component/Contact";
-import * as styles from "../styles/home.module.css";
+// import * as styles from "../styles/home.module.css";
 //or this,
-import { header } from "../styles/home.module.css";
+// import { header } from "../styles/home.module.css";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Home from "../component/Home";
+import Home from "../component/Home/Home";
+
 const HomePage = () => {
   return (
     <Layout>

@@ -12,9 +12,15 @@
   --secondary: ;
   --brick: #aa4a44;
   --brick2: #bc4a3c;
+  --brick-semi-dark: #991b1b;
   --brick-dark: #842020;
   --concrete: #606165;
   --concrete2: #747270;
+  --clr-btn-base: #991b1b;
+  --clr-btn-alpha: #efefef;
+  --clr-btn-light: #efefef;
+  --clr-btn-dark: #060b09;
+  --clr-custom-pink: #ebc9c7;
 
   /* primary / nav / default - WHAT?! */
   --ff-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,26 +56,26 @@
   padding: 0;
   text-decoration: none;
   font-family: "Montserrat";
-  color: #991b1b;
   /* color: var(--link-color-90); */
 }
 
 html {
   /*default size of 16px will work if some browser like opera-mini does not support vw */
-  font-size: calc(0.2em + 1vw);
-}
+  /* font-size: calc(0.2em + 1vw); */
+  /* 14px low limit and 22px maxlimit */
+  /* font-size: min(max(14px, calc(0.16em + 1vw)), 22px); */
 
-/* Below 880px it becomes 13px, so add a breakpoint of 14px */
-@media (max-width: 880px) {
+  /* Below 880px it becomes 13px, so add a breakpoint of 14px */
+  /* @media (max-width: 880px) {
   html {
     font-size: 14px;
   }
-}
-/* After 1800px it becomes 22px+ very large, so add a breakpoint of 22px , set max-size to 22 for large screen 1800+ */
-@media (min-width: 1800px) {
+} */
+  /* After 1800px it becomes 22px+ very large, so add a breakpoint of 22px , set max-size to 22 for large screen 1800+ */
+  /* @media (min-width: 1800px) {
   html {
-    font-size: 22px;
-  }
+    font-size: 20px;
+  } */
 }
 
 html,
@@ -77,19 +83,12 @@ body {
   min-height: 100%;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
+/* Set the font size to 1rem by default */
+body {
+  font-size: 1rem; /* Default 1rem */
+  /* color: var(--brick-semi-dark); */
 }
 
-h1,
-h2,
-h3 {
-  color: var(--link-color-90);
-}
 body {
   background: radial-gradient(
     at top left,
@@ -100,9 +99,66 @@ body {
   );
   background: white;
 }
+
+/* For screens larger than 1920px width */
+@media screen and (min-width: 1921px) {
+  body {
+    font-size: min(
+      max(18px, 1rem),
+      calc(1rem + 0.1vw)
+    ); /* Ensure it doesn't exceed 18px or user-provided rem */
+  }
+}
+
+/* body { */
+
+/* Use the user provide 1 rem if it is the maximum otherwise dont go below 14px */
+/* @media (min-width: 576px) {
+    font-size: max(14px, 1rem);
+  } */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+    font-size: max(16px, 1rem);
+  } */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+    font-size: max(16px, 1rem);
+  } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+    font-size: max(16px, 1rem);
+  } */
+
+/* Extra extra large and 4k devices */
+/* @media (min-width: 1920px) {
+    font-size: min(22px, 1rem);
+  } */
+/* } */
+
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  /* color: var(--link-color-90); */
+  color: var(--brick-semi-dark);
+}
+a {
+  text-decoration: none;
+}
 p {
-  margin: 16px auto;
-  line-height: 1.5em;
+  /* margin: 16px auto; */
+  /* line-height: 1.5em; */
 }
 
 /* layout & nav */
@@ -111,6 +167,9 @@ p {
   margin: 0 auto;
 }
 
+.container-center {
+  margin: 0 auto;
+}
 footer {
   background-color: pink;
   padding: 0.5em 0;

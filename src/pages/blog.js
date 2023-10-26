@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../component/Layout";
 import * as styles from "../styles/blog.module.css";
 import { Link, graphql } from "gatsby";
+import MarginBottom from "../component/Common/MarginBottom";
 const slugify = require("../component/slugify");
 
 const Blog = ({ data }) => {
@@ -28,13 +29,14 @@ const Blog = ({ data }) => {
               >
                 <div>
                   <h3>{post.frontmatter.title}</h3>
+                  <p>{post.frontmatter.tags}</p>
                   <p>
-                    {post.frontmatter.tags +
-                      " Published:" +
+                    {" Published: " +
                       post.frontmatter.date +
-                      " Author:" +
+                      " | Author: " +
                       post.frontmatter.author}
                   </p>
+                  <br></br>
                   <p>{post.excerpt}</p>
                 </div>
               </Link>
@@ -45,6 +47,7 @@ const Blog = ({ data }) => {
           <p>Like what you see? Email me at {contact} for a quote</p>
         </div>
       </section>
+      <MarginBottom amount={"2rem"}></MarginBottom>
     </Layout>
   );
 };

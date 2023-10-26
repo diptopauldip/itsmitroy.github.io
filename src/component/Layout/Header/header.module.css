@@ -1,11 +1,15 @@
+@import "../../../styles/global.css";
+
 header {
   /* These two are important to make the navbar sticky */
   position: sticky;
   top: 0;
-  background-color: pink;
+  /* background-color: pink; */
+  background-color: var(--clr-custom-pink);
   padding: 0.5em 0;
   text-align: center;
   margin-bottom: 1em; /*with em it is already adjusting based on the size of root font,reduced the margin a littlle bit in mobile version*/
+  z-index: 99;
 }
 
 @media (min-width: 768px) {

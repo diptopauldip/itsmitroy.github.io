@@ -1,10 +1,10 @@
 import React from "react";
 
-const containerStyle = {
-  marginBottom: "2em",
-};
+const MarginBottom = ({ children, amount }) => {
+  const containerStyle = {
+    marginBottom: amount,
+  };
 
-const MarginBottom = ({ children }) => {
   return <div style={containerStyle}>{children}</div>;
 };
 

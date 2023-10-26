@@ -1,19 +1,15 @@
 import React from "react";
 import Layout from "../../component/Layout";
+import Research from "../../component/Research/Research";
 
-const Research = () => {
+const ResearchPage = () => {
   return (
     <Layout>
-      <section className=''>
-        <div>
-          {/* <h2>Research Work</h2> */}
-          {/* <h2>From Concepts to Concrete: Our Research Journey</h2> */}
-          <h2>Pushing Boundaries in Civil and Structural Research</h2>
-          <h3>Pushing Boundaries in Civil and Structural Research</h3>
-        </div>
-      </section>
+      <Research></Research>
     </Layout>
   );
 };
 
-export default Research;
+export const Head = () => <title>Research</title>;
+
+export default ResearchPage;

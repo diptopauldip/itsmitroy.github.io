@@ -41,7 +41,9 @@ const Navbar = () => {
 
   return (
     <div className='nav-container'>
-      <div className='logo'>Mithun Roy</div>
+      <div className='logo'>
+        <a href='/'>Mithun Roy</a>
+      </div>
       <div
         className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
         onClick={handleToggleClick}

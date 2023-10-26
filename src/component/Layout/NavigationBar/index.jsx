@@ -41,7 +41,9 @@ const NavigationBar = () => {
     <div className='header-sticky'>
       <div className='common-container'>
         <div className='nav-container'>
-          <div className='logo'>Mithun Roy</div>
+          <div className='logo'>
+            <Link to='/'>MR</Link>
+          </div>
           <div
             className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
             onClick={handleToggleClick}
