@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkitsmitroy_github_io=self.webpackChunkitsmitroy_github_io||[]).push([[218],{6257:function(t,e,i){i.r(e);var u=i(7294);e.default=()=>u.createElement("div",null,"test")}}]);
+//# sourceMappingURL=component---src-pages-projects-test-js-3f8c7e694e1f0e063b9b.js.map
