@@ -1,5 +1,5 @@
 ---
-title: Chatgpt changing the game of Artifical Intelligence usage and development.
+title: Chatgpt- the gamechanger of AI usage and development.
 date: 2019-08-07 14:08:00
 author: Sam Altman
 tags: ["ChatGPT", "Artificial Intelligence"]
